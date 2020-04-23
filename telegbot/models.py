@@ -25,3 +25,6 @@ class Player_Response(models.Model):
     message = models.CharField(max_length=150)
     correct = models.BooleanField(default='False')
     winner = models.BooleanField(default='False')
+
+    def __str__(self):
+        return self.question_id.title
