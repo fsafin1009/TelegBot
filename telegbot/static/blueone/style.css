@@ -1,0 +1,13 @@
+.black-border {
+    border: 1px solid #000;
+}
+.black-border thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #000;
+}
+.black-border td, .black-border th {
+    border: 1px solid #000;
+}
+.black-border td.cell-middle {
+    vertical-align: middle;
+}
