@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crew list</title>
+    <script type="text/javascript" src="/static/blueone/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/blueone/bower_components/moment/min/moment.min.js"></script>
+    <script type="text/javascript" src="/static/blueone/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+    <link rel="stylesheet" href="/static/blueone/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+    <link rel="stylesheet" href="/static/blueone/style.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-10">
+                <img class="" src="/static/blueone/assets/logo.svg" alt="" width="150" height="150">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-10">
+                {% block topbar %}{% endblock %}
+            </div>
+            <div class="col-2">
+                <button type="button" id="copybtn" class="btn btn-info" data-clipboard-target="#crewlist-table">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="crewlist-table">
+        {% block content %}{% endblock %}
+    </div>
+    <script type="text/javascript">
+        new ClipboardJS('#copybtn');
+     </script>
+</body>
+
+</html>
