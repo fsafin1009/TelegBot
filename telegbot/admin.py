@@ -15,5 +15,9 @@ class QuestionAdmin(admin.ModelAdmin):
 
 admin.site.register(Question, QuestionAdmin)
 
-admin.site.register(Player_Response)
+
+class Player_ResponseAdmin(admin.ModelAdmin):
+    list_display =('player_id','question_id','message', 'correct','winner')
+
+admin.site.register(Player_Response, Player_ResponseAdmin)
 

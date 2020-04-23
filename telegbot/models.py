@@ -3,10 +3,10 @@ from django.db import models
 # Create your models here.
 
 class Player(models.Model):
-    name = models.CharField(verbose_name="Your name", max_length=128)
-    mobil_phone = models.CharField(verbose_name="Your phone", max_length=20)
-    city = models.CharField(verbose_name="Your city", max_length=128)
-    team = models.CharField(verbose_name="Your team",max_length=128)
+    name = models.CharField(verbose_name="Name", max_length=128)
+    mobil_phone = models.CharField(verbose_name="Phone", max_length=20)
+    city = models.CharField(verbose_name="City", max_length=128)
+    team = models.CharField(verbose_name="Team",max_length=128)
 
     def __str__(self):
         return self.name
