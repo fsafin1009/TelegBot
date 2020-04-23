@@ -32,4 +32,4 @@ class Player_Response(models.Model):
     team_name.short_description = 'Team'
 
     def __str__(self):
-        return self.question_id
+        return self.message

@@ -17,7 +17,7 @@ admin.site.register(Question, QuestionAdmin)
 
 
 class Player_ResponseAdmin(admin.ModelAdmin):
-    list_display =('question_id', 'player_id', 'team_name', 'message', 'correct', 'winner')
+    list_display =('question_id', 'player_id', 'message', 'correct', 'winner')
     list_filter = ['correct', 'winner']
 
 admin.site.register(Player_Response, Player_ResponseAdmin)
