@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 
-{% block topbar %}Question{% endblock %}
+{% block topbar %}
+    Question
+    <ul>
+        <li><a href="{% url 'telegbot:players' %}">Players list</a></li>
+        <li><a href="{% url 'telegbot:player_response' %}">Players response list</a></li>
+    </ul>
+{% endblock %}
 
 {% block content %}
     <h5>Answer</h5>

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block topbar %}Player Responses{% endblock %}
+
+{% block content %}
+    <h5>Responses</h5>
+    <table class="table table-bordered black-border">
+        <tbody>
+        <tr>
+            <td scope="col" class="font-weight-bold">Name</td>
+            <td scope="col" class="font-weight-bold">Message</td>
+            <td scope="col" class="font-weight-bold">Correct</td>
+            <td scope="col" class="font-weight-bold">Winner</td>
+        </tr>
+        {% if player_response_list %}
+            {% for response in player_response_list %}
+                <tr>
+                    <td>{{ response.player_id }}</td>
+                    <td>{{ response.message }}</td>
+                    <td>{{ response.correct }}</td>
+                    <td>{{ response.winner }}</td>
+                </tr>
+            {% endfor %}
+        {% endif %}
+        </tbody>
+    </table>
+{% endblock %}
